@@ -10,3 +10,16 @@
     font-family: 'Rancho';
     color: white;
 }
+
+.hero {
+    background-image: url('../images/more/hero.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-color: black;
+}
+
+/* Common Styles */
+p {
+    font-family: 'Poppins';
+}
