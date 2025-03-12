@@ -2,11 +2,12 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Header from './Components/Header'
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <h1>Hello, Espresso Emporium client is running with Router!!!</h1>
+    element: <Header></Header>
   }
 ])
 

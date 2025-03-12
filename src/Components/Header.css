@@ -1,0 +1,12 @@
+.header-bg {
+    background-image: url('../images/more/header.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-color: black;
+}
+
+.header-title {
+    font-family: 'Rancho';
+    color: white;
+}
