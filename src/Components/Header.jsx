@@ -9,7 +9,7 @@ const Header = () => {
                 <img className='w-9' src={headerLogo} alt="" />
             </div>
             <div>
-                <h2 className='text-3xl header-title'>Espresso Emporium</h2>
+                <h2 className='text-3xl text-white title'>Espresso Emporium</h2>
             </div>
         </div>
     );

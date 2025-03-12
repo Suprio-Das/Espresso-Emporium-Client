@@ -6,9 +6,8 @@
     background-color: black;
 }
 
-.header-title {
+.title {
     font-family: 'Rancho';
-    color: white;
 }
 
 .hero {
@@ -18,6 +17,7 @@
     background-size: cover;
     background-color: black;
 }
+
 
 /* Common Styles */
 p {
