@@ -1,4 +1,5 @@
-.header-bg {
+.header-bg,
+.footer-bg {
     background-image: url('../images/more/header.jpg');
     background-repeat: no-repeat;
     background-position: center center;
