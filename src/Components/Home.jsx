@@ -5,6 +5,7 @@ import Badge from '../images/icons/badge.png';
 import Grains from '../images/icons/grains.png';
 import Coffee from '../images/icons/coffee.png';
 import { Link } from 'react-router-dom';
+import CoffeeCard from './CoffeeCard';
 
 const Home = () => {
     return (
@@ -63,6 +64,9 @@ const Home = () => {
                 <Link className='flex justify-center items-center my-3'>
                     <button className='btn title flex justify-center items-center text-white bg-[#E3B577] border-[#331A15] text-shadow text-lg'>Add Coffee <img className='w-5' src={Cup} alt="" /> </button>
                 </Link>
+                <div className='grid grid-cols-2'>
+                    <CoffeeCard></CoffeeCard>
+                </div>
             </div>
         </div>
     );
