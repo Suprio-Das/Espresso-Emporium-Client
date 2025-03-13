@@ -4,6 +4,7 @@ import Cup from '../images/icons/cup_icon.png';
 import Badge from '../images/icons/badge.png';
 import Grains from '../images/icons/grains.png';
 import Coffee from '../images/icons/coffee.png';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
     return (
@@ -53,6 +54,15 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
+            </div>
+
+            {/* Coffee Section */}
+            <div className='w-[70%] mx-auto my-11 p-5'>
+                <p className='text-center text-xs mb-2'>--- Sip & Savor ---</p>
+                <h1 className='title text-4xl text-center text-[#331A15]'>Our Popular Products</h1>
+                <Link className='flex justify-center items-center my-3'>
+                    <button className='btn title flex justify-center items-center text-white bg-[#E3B577] border-[#331A15] text-shadow text-lg'>Add Coffee <img className='w-5' src={Cup} alt="" /> </button>
+                </Link>
             </div>
         </div>
     );

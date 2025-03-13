@@ -23,3 +23,7 @@
 p {
     font-family: 'Poppins';
 }
+
+.text-shadow {
+    text-shadow: 1px 0.7px 0px #5c2c06;
+}
