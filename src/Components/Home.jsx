@@ -4,6 +4,14 @@ import Cup from '../images/icons/cup_icon.png';
 import Badge from '../images/icons/badge.png';
 import Grains from '../images/icons/grains.png';
 import Coffee from '../images/icons/coffee.png';
+import Cup1 from '../images/cups/Cup1.png';
+import Cup2 from '../images/cups/Cup2.png';
+import Cup3 from '../images/cups/Cup3.png';
+import Cup4 from '../images/cups/Cup4.png';
+import Cup5 from '../images/cups/Cup5.png';
+import Cup6 from '../images/cups/Cup6.png';
+import Cup7 from '../images/cups/Cup7.png';
+import Cup8 from '../images/cups/Cup8.png';
 import { Link } from 'react-router-dom';
 import CoffeeCard from './CoffeeCard';
 
@@ -64,8 +72,41 @@ const Home = () => {
                 <Link className='flex justify-center items-center my-3'>
                     <button className='btn title flex justify-center items-center text-white bg-[#E3B577] border-[#331A15] text-shadow text-lg'>Add Coffee <img className='w-5' src={Cup} alt="" /> </button>
                 </Link>
-                <div className='grid lg:grid-cols-2 grid-cols-1 my-11'>
+                <div className='grid lg:grid-cols-2 grid-cols-1 my-11 gap-5'>
                     <CoffeeCard></CoffeeCard>
+                    <CoffeeCard></CoffeeCard>
+                </div>
+            </div>
+
+            {/* Instagram and Gallery Section */}
+            <div className='lg:w-[70%] w-full mx-auto my-11 p-5'>
+                <p className='text-center text-xs mb-2'>Follow Us Now</p>
+                <h1 className='title text-4xl text-center text-[#331A15]'>Follow on Instagram</h1>
+                <div className='grid lg:grid-cols-4 grid-cols-1 gap-5 my-11'>
+                    <div>
+                        <img src={Cup1} alt="" />
+                    </div>
+                    <div>
+                        <img src={Cup2} alt="" />
+                    </div>
+                    <div>
+                        <img src={Cup3} alt="" />
+                    </div>
+                    <div>
+                        <img src={Cup4} alt="" />
+                    </div>
+                    <div>
+                        <img src={Cup5} alt="" />
+                    </div>
+                    <div>
+                        <img src={Cup6} alt="" />
+                    </div>
+                    <div>
+                        <img src={Cup7} alt="" />
+                    </div>
+                    <div>
+                        <img src={Cup8} alt="" />
+                    </div>
                 </div>
             </div>
         </div>
