@@ -24,6 +24,7 @@ const Home = () => {
                 <div className='lg:w-2/5 p-2 space-y-2'>
                     <h1 className='text-4xl title text-white'>Would you like a Cup of Delicious Coffee?</h1>
                     <p className='text-white text-xs'>It's coffee time - Sip & Savor - Relaxation in every sip! Get the nostalgia back!! Your companion of every moment!!! Enjoy the beautiful moments and make them memorable.</p>
+                    <button className='btn bg-[#E3B577] shadow-none title text-xl hover:bg-transparent hover:text-white'>Learn More</button>
                 </div>
             </div>
             <div className='bg-[#ECEAE3]'>
