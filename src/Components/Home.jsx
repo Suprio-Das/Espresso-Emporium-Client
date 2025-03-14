@@ -71,7 +71,7 @@ const Home = () => {
             <div className='lg:w-[70%] w-full mx-auto my-11 p-5'>
                 <p className='text-center text-xs mb-2'>--- Sip & Savor ---</p>
                 <h1 className='title text-4xl text-center text-[#331A15]'>Our Popular Products</h1>
-                <Link className='flex justify-center items-center my-3'>
+                <Link className='flex justify-center items-center my-3' to="/addCoffee">
                     <button className='btn title flex justify-center items-center text-white bg-[#E3B577] border-[#331A15] text-shadow text-lg'>Add Coffee <img className='w-5' src={Cup} alt="" /> </button>
                 </Link>
                 <div className='grid lg:grid-cols-2 grid-cols-1 my-11 gap-5'>
