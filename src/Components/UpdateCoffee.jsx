@@ -74,7 +74,7 @@ const UpdateCoffee = () => {
                             </fieldset>
                         </div>
                     </div>
-                    <input type="submit" className='btn w-full bg-[#D2B48C] border-[#331A15] border-1 mt-3' value="Add Coffee" />
+                    <input type="submit" className='btn w-full bg-[#D2B48C] border-[#331A15] border-1 mt-3' value="Update Coffee" />
                 </form>
             </div>
         </div>
