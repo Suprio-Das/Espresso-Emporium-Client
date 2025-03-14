@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Styles.css';
 import Cup from '../images/icons/cup_icon.png';
 import Badge from '../images/icons/badge.png';
@@ -12,12 +12,19 @@ import Cup5 from '../images/cups/Cup5.png';
 import Cup6 from '../images/cups/Cup6.png';
 import Cup7 from '../images/cups/Cup7.png';
 import Cup8 from '../images/cups/Cup8.png';
-import { Link } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import CoffeeCard from './CoffeeCard';
 import CoffeeDetails from './CoffeeDetails';
 import UpdateCoffee from './UpdateCoffee';
 
 const Home = () => {
+    const [loadedData, setLoadedData] = useState([]);
+    useEffect(() => {
+        fetch('http://localhost:5000/coffees')
+            .then(res => res.json())
+            .then(data => setLoadedData(data))
+    }, [])
+    console.log(loadedData);
     return (
         <div>
             {/* Hero Banner */}
