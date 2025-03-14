@@ -83,8 +83,9 @@ const Home = () => {
                     <button className='btn title flex justify-center items-center text-white bg-[#E3B577] border-[#331A15] text-shadow text-lg'>Add Coffee <img className='w-5' src={Cup} alt="" /> </button>
                 </Link>
                 <div className='grid lg:grid-cols-2 grid-cols-1 my-11 gap-5'>
-                    <CoffeeCard></CoffeeCard>
-                    <CoffeeCard></CoffeeCard>
+                    {
+                        coffees.map(coffee => <CoffeeCard key={coffee._id} coffee={coffee}></CoffeeCard>)
+                    }
                 </div>
             </div>
 
