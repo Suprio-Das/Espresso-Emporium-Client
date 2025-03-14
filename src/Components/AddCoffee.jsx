@@ -16,6 +16,19 @@ const AddCoffee = () => {
         const price = form.price.value;
         const newCoffee = { name, chef, category, supplier, taste, details, photo, price }
         console.log(newCoffee);
+
+        // Sending data to the backend
+        fetch('http://localhost:5000/coffees', {
+            method: "POST",
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify(newCoffee)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+            })
     }
     return (
         <div className='w-[70%] mx-auto my-16'>
