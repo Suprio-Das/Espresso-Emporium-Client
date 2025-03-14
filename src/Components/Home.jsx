@@ -25,7 +25,7 @@ const Home = () => {
                 setCoffees(data);
                 setLoading(false);
             })
-    }, [])
+    }, [coffees])
     console.log(coffees);
     return (
         <div>
@@ -86,7 +86,7 @@ const Home = () => {
                 </Link>
                 <div className='grid lg:grid-cols-2 grid-cols-1 my-11 gap-5'>
                     {
-                        loading ? <span className="loading loading-dots loading-xl"></span> : (coffees.map(coffee => <CoffeeCard key={coffee._id} coffee={coffee}></CoffeeCard>))
+                        loading ? <span className="loading loading-dots loading-xl"></span> : (coffees.map(coffee => <CoffeeCard key={coffee._id} coffee={coffee} coffees={coffees} setCoffees={setCoffees}></CoffeeCard>))
                     }
                 </div>
             </div>
