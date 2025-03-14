@@ -1,6 +1,7 @@
 import React from 'react';
 import { HiMiniArrowLeftStartOnRectangle } from "react-icons/hi2";
 import { Link } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const AddCoffee = () => {
     const handleAddCoffee = (e) => {
@@ -28,6 +29,13 @@ const AddCoffee = () => {
             .then(res => res.json())
             .then(data => {
                 console.log(data);
+                if (data.insertedId) {
+                    Swal.fire({
+                        title: "Holaaaa!",
+                        text: "New Coffee Added!",
+                        icon: "success"
+                    });
+                }
             })
     }
     return (
