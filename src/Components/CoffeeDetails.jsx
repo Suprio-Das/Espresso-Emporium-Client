@@ -21,6 +21,7 @@ const CoffeeDetails = () => {
                         <p className='text-[14px] mt-1'><span className='font-semibold'>Supplier: </span> {singleCoffee?.supplier}</p>
                         <p className='text-[14px] mt-1'><span className='font-semibold'>Category: </span> {singleCoffee?.category}</p>
                         <p className='text-[14px] mt-1'><span className='font-semibold'>Details: </span> {singleCoffee?.details}</p>
+                        <p className='text-[14px] mt-1'><span className='font-semibold'>Taste: </span> {singleCoffee?.taste}</p>
                         <p className='text-[14px] mt-1'><span className='font-semibold'>Price: </span> {singleCoffee?.price} BDT</p>
                     </div>
                 </div>
