@@ -120,10 +120,6 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-
-            {/* Temporary Section for designing */}
-            <CoffeeDetails></CoffeeDetails>
-            <UpdateCoffee></UpdateCoffee>
         </div>
     );
 };
