@@ -4,7 +4,6 @@ import { Link, useLoaderData } from 'react-router-dom';
 
 const UpdateCoffee = () => {
     const data = useLoaderData();
-    console.log(data.name);
     return (
         <div className='w-[70%] mx-auto my-16'>
             <Link className='title text-2xl flex items-center my-3' to='/'>
@@ -21,13 +20,13 @@ const UpdateCoffee = () => {
                         <div>
                             <fieldset className="fieldset">
                                 <legend className="fieldset-legend">Name</legend>
-                                <input type="text" className="input w-full" name='name' placeholder="Enter coffee name" />
+                                <input type="text" className="input w-full" name='name' defaultValue={data?.name} placeholder="Enter coffee name" />
                             </fieldset>
                         </div>
                         <div>
                             <fieldset className="fieldset">
                                 <legend className="fieldset-legend">Chef</legend>
-                                <input type="text" className="input w-full" name='chef' placeholder="Enter chef name" />
+                                <input type="text" className="input w-full" name='chef' defaultValue={data?.chef} placeholder="Enter chef name" />
                             </fieldset>
                         </div>
                     </div>
@@ -36,13 +35,13 @@ const UpdateCoffee = () => {
                         <div>
                             <fieldset className="fieldset">
                                 <legend className="fieldset-legend">Supplier</legend>
-                                <input type="text" className="input w-full" name='supplier' placeholder="Enter supplier name" />
+                                <input type="text" className="input w-full" name='supplier' defaultValue={data?.supplier} placeholder="Enter supplier name" />
                             </fieldset>
                         </div>
                         <div>
                             <fieldset className="fieldset">
                                 <legend className="fieldset-legend">Taste</legend>
-                                <input type="text" className="input w-full" name='taste' placeholder="Enter coffee taste" />
+                                <input type="text" className="input w-full" name='taste' defaultValue={data?.taste} placeholder="Enter coffee taste" />
                             </fieldset>
                         </div>
                     </div>
@@ -51,13 +50,13 @@ const UpdateCoffee = () => {
                         <div>
                             <fieldset className="fieldset">
                                 <legend className="fieldset-legend">Category</legend>
-                                <input type="text" className="input w-full" name='category' placeholder="Enter coffee category" />
+                                <input type="text" className="input w-full" name='category' defaultValue={data?.category} placeholder="Enter coffee category" />
                             </fieldset>
                         </div>
                         <div>
                             <fieldset className="fieldset">
                                 <legend className="fieldset-legend">Details</legend>
-                                <input type="text" className="input w-full" name='details' placeholder="Enter coffee details" />
+                                <input type="text" className="input w-full" name='details' defaultValue={data?.details} placeholder="Enter coffee details" />
                             </fieldset>
                         </div>
                     </div>
@@ -66,13 +65,13 @@ const UpdateCoffee = () => {
                         <div>
                             <fieldset className="fieldset">
                                 <legend className="fieldset-legend">Photo</legend>
-                                <input type="text" className="input w-full" name='photo' placeholder="Enter Photo URL" />
+                                <input type="text" className="input w-full" name='photo' defaultValue={data?.photo} placeholder="Enter Photo URL" />
                             </fieldset>
                         </div>
                         <div>
                             <fieldset className="fieldset">
                                 <legend className="fieldset-legend">Price</legend>
-                                <input type="text" className="input w-full" name='price' placeholder="Enter coffee price(BDT)" />
+                                <input type="text" className="input w-full" name='price' defaultValue={data?.price} placeholder="Enter coffee price(BDT)" />
                             </fieldset>
                         </div>
                     </div>
