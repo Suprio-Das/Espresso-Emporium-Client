@@ -15,6 +15,7 @@ import Cup8 from '../images/cups/Cup8.png';
 import { Link } from 'react-router-dom';
 import CoffeeCard from './CoffeeCard';
 import CoffeeDetails from './CoffeeDetails';
+import UpdateCoffee from './UpdateCoffee';
 
 const Home = () => {
     return (
@@ -114,6 +115,7 @@ const Home = () => {
 
             {/* Temporary Section for designing */}
             <CoffeeDetails></CoffeeDetails>
+            <UpdateCoffee></UpdateCoffee>
         </div>
     );
 };
