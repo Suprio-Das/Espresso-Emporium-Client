@@ -14,15 +14,17 @@ import Cup7 from '../images/cups/Cup7.png';
 import Cup8 from '../images/cups/Cup8.png';
 import { Link } from 'react-router-dom';
 import CoffeeCard from './CoffeeCard';
-import CoffeeDetails from './CoffeeDetails';
-import UpdateCoffee from './UpdateCoffee';
 
 const Home = () => {
     const [coffees, setCoffees] = useState([]);
+    const [loading, setLoading] = useState(true);
     useEffect(() => {
         fetch('http://localhost:5000/coffees')
             .then(res => res.json())
-            .then(data => setCoffees(data))
+            .then(data => {
+                setCoffees(data);
+                setLoading(false);
+            })
     }, [])
     console.log(coffees);
     return (
@@ -84,7 +86,7 @@ const Home = () => {
                 </Link>
                 <div className='grid lg:grid-cols-2 grid-cols-1 my-11 gap-5'>
                     {
-                        coffees.map(coffee => <CoffeeCard key={coffee._id} coffee={coffee}></CoffeeCard>)
+                        loading ? <p>loading</p> : (coffees.map(coffee => <CoffeeCard key={coffee._id} coffee={coffee}></CoffeeCard>))
                     }
                 </div>
             </div>

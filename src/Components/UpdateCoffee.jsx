@@ -1,9 +1,44 @@
 import React from 'react';
 import { HiMiniArrowLeftStartOnRectangle } from 'react-icons/hi2';
 import { Link, useLoaderData } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const UpdateCoffee = () => {
     const data = useLoaderData();
+    const handleUpdate = (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const name = form.name.value;
+        const chef = form.chef.value;
+        const category = form.category.value;
+        const taste = form.taste.value;
+        const supplier = form.supplier.value;
+        const details = form.details.value;
+        const photo = form.photo.value;
+        const price = form.price.value;
+        const updatedCoffee = { name, chef, category, supplier, taste, details, photo, price }
+        console.log(updatedCoffee);
+
+        // Sending data to the backend
+        fetch(`http://localhost:5000/coffees/${data._id}`, {
+            method: "PUT",
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify(updatedCoffee)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data) {
+                    Swal.fire({
+                        title: "Hey, Transformer!",
+                        text: "The new transformation has been done successfully!",
+                        icon: "success"
+                    });
+                }
+            })
+    }
     return (
         <div className='w-[70%] mx-auto my-16'>
             <Link className='title text-2xl flex items-center my-3' to='/'>
@@ -14,7 +49,7 @@ const UpdateCoffee = () => {
                     <h1 className='text-3xl title text-center'>Update Existing Coffee</h1>
                     <p className='text-[12px] text-center'>Keep your coffee details up to date with this form! Modify the name, origin, flavor, price, or any other details to ensure accurate and fresh information. Manage your collection effortlessly and maintain a well-organized coffee list.</p>
                 </div>
-                <form>
+                <form onSubmit={handleUpdate}>
                     {/* Coffe & Chef name input field added */}
                     <div className='grid lg:grid-cols-2 grid-cols-1 gap-5'>
                         <div>
