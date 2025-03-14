@@ -1,8 +1,9 @@
 import React from 'react';
+import ErrorImage from '../images/404/404.gif';
 const ErrorPage = () => {
     return (
-        <div>
-            <h1>This is 404 page.</h1>
+        <div className='flex justify-center items-center'>
+            <img src={ErrorImage} alt="" />
         </div>
     );
 };
