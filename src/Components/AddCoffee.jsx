@@ -3,6 +3,20 @@ import { HiMiniArrowLeftStartOnRectangle } from "react-icons/hi2";
 import { Link } from 'react-router-dom';
 
 const AddCoffee = () => {
+    const handleAddCoffee = (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const name = form.name.value;
+        const chef = form.chef.value;
+        const category = form.category.value;
+        const taste = form.taste.value;
+        const supplier = form.supplier.value;
+        const details = form.details.value;
+        const photo = form.photo.value;
+        const price = form.price.value;
+        const newCoffee = { name, chef, category, supplier, taste, details, photo, price }
+        console.log(newCoffee);
+    }
     return (
         <div className='w-[70%] mx-auto my-16'>
             <Link className='title text-2xl flex items-center my-3' to='/'>
@@ -13,7 +27,7 @@ const AddCoffee = () => {
                     <h1 className='text-3xl title text-center'>Add New Coffee</h1>
                     <p className='text-[12px] text-center'>Enhance your coffee collection by adding a new blend! Provide details such as name, origin, flavor, and price. This form ensures each coffee entry is well-documented, making it easier to manage and showcase your premium selections.</p>
                 </div>
-                <form>
+                <form onSubmit={handleAddCoffee}>
                     {/* Coffe & Chef name input field added */}
                     <div className='grid lg:grid-cols-2 grid-cols-1 gap-5'>
                         <div>
