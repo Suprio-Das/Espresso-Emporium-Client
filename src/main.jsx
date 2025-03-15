@@ -25,12 +25,12 @@ const router = createBrowserRouter([
       {
         path: '/coffees/:id',
         element: <CoffeeDetails></CoffeeDetails>,
-        loader: ({ params }) => fetch(`http://localhost:5000/coffees/${params.id}`)
+        loader: ({ params }) => fetch(`https://espresso-emporium-server-lac-kappa.vercel.app/coffees/${params.id}`)
       },
       {
         path: '/updateCoffee/:id',
         element: <UpdateCoffee></UpdateCoffee>,
-        loader: ({ params }) => fetch(`http://localhost:5000/coffees/${params.id}`)
+        loader: ({ params }) => fetch(`https://espresso-emporium-server-lac-kappa.vercel.app/coffees/${params.id}`)
       },
       {
         path: '*',

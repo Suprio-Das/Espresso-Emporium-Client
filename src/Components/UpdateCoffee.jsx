@@ -19,7 +19,7 @@ const UpdateCoffee = () => {
         const updatedCoffee = { name, chef, category, supplier, taste, details, photo, price }
 
         // Sending data to the backend
-        fetch(`http://localhost:5000/coffees/${data._id}`, {
+        fetch(`https://espresso-emporium-server-lac-kappa.vercel.app/coffees/${data._id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json"

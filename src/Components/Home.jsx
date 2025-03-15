@@ -19,7 +19,7 @@ const Home = () => {
     const [coffees, setCoffees] = useState([]);
     const [loading, setLoading] = useState(true);
     useEffect(() => {
-        fetch('http://localhost:5000/coffees')
+        fetch('https://espresso-emporium-server-lac-kappa.vercel.app/coffees')
             .then(res => res.json())
             .then(data => {
                 setCoffees(data);
