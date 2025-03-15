@@ -25,12 +25,12 @@ const router = createBrowserRouter([
       {
         path: '/coffees/:id',
         element: <CoffeeDetails></CoffeeDetails>,
-        loader: ({ params }) => fetch(`https://espresso-emporium-server-8sjaiyl3e-suprio-das-projects.vercel.app/coffees/${params.id}`)
+        loader: ({ params }) => fetch(`https://espresso-emporium-server-nine.vercel.app/coffees/${params.id}`)
       },
       {
         path: '/updateCoffee/:id',
         element: <UpdateCoffee></UpdateCoffee>,
-        loader: ({ params }) => fetch(`https://espresso-emporium-server-8sjaiyl3e-suprio-das-projects.vercel.app/coffees/${params.id}`)
+        loader: ({ params }) => fetch(`https://espresso-emporium-server-nine.vercel.app/coffees/${params.id}`)
       },
       {
         path: '*',

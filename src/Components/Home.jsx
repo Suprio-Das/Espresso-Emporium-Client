@@ -19,13 +19,13 @@ const Home = () => {
     const [coffees, setCoffees] = useState([]);
     const [loading, setLoading] = useState(true);
     useEffect(() => {
-        fetch('https://espresso-emporium-server-8sjaiyl3e-suprio-das-projects.vercel.app/coffees')
+        fetch('https://espresso-emporium-server-nine.vercel.app/coffees')
             .then(res => res.json())
             .then(data => {
                 setCoffees(data);
                 setLoading(false);
             })
-    }, [coffees])
+    }, [])
     return (
         <div>
             {/* Hero Banner */}
