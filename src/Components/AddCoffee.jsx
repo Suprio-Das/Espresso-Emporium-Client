@@ -16,7 +16,6 @@ const AddCoffee = () => {
         const photo = form.photo.value;
         const price = form.price.value;
         const newCoffee = { name, chef, category, supplier, taste, details, photo, price }
-        console.log(newCoffee);
 
         // Sending data to the backend
         fetch('http://localhost:5000/coffees', {
@@ -28,7 +27,6 @@ const AddCoffee = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
                 if (data.insertedId) {
                     Swal.fire({
                         title: "Holaaaa!",

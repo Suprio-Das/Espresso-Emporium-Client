@@ -26,7 +26,6 @@ const Home = () => {
                 setLoading(false);
             })
     }, [coffees])
-    console.log(coffees);
     return (
         <div>
             {/* Hero Banner */}
