@@ -1,6 +1,6 @@
 # Espresso Emporium
 
-This is the Client side of the **Espresso Emporium**. This project shows the implementation of both Front-end and Backend integration with user authentication using Firebase.
+This is the Client side of the **Espresso Emporium**. This project shows the implementation of both Front-end and Backend integration with ~~user authentication using Firebase~~. Firebase Authentication will be added on next update.
 <br><br>
 
 **Languages**
