@@ -18,3 +18,5 @@ This is the Client side of the **Espresso Emporium**. This project shows the imp
 - React Icons
 - Sweet Alert
 - React Router
+
+**Note:** If the site is not working properly, it's not my fault. I have deployed the backend server in Vercel free tier. It goes to sleep after certain inacitvity. If you're interested to the visit the live link, please drop a mail to this `suprio.cse@gmail.com`
